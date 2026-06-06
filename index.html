@@ -158,6 +158,37 @@
   .nota b{color:#f0c98a}
   .nota .titn{font-family:var(--fonte-titulo);font-weight:700;color:#fff;font-size:1rem;margin-bottom:8px;display:block}
 
+  /* ===== FONTE OFICIAL ===== */
+  .fonte{
+    margin-top:14px;padding:24px 20px;border-radius:16px;
+    background:var(--cartao);border:1px solid var(--linha);
+    box-shadow:var(--sombra);text-align:center;
+  }
+  .fonte .selo{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--fonte-num);font-size:.66rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--verde);
+    background:var(--verde-claro);padding:5px 11px;border-radius:5px;margin-bottom:14px;font-weight:600;
+  }
+  .fonte .selo svg{width:13px;height:13px}
+  .fonte h3{font-family:var(--fonte-titulo);font-weight:700;font-size:1.12rem;margin-bottom:6px;letter-spacing:-.01em}
+  .fonte p{color:var(--tinta-suave);font-size:.93rem;max-width:42ch;margin:0 auto 18px}
+  .btn-fonte{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--tinta);color:#fff;text-decoration:none;
+    font-family:var(--fonte-titulo);font-weight:500;font-size:.96rem;
+    padding:14px 22px;border-radius:11px;
+    transition:all .2s cubic-bezier(.25,.46,.45,.94);
+    box-shadow:0 4px 14px rgba(28,23,20,.18);
+  }
+  .btn-fonte:hover{background:var(--ambar-forte);transform:translateY(-2px);box-shadow:0 8px 22px rgba(196,112,13,.32)}
+  .btn-fonte:active{transform:translateY(0)}
+  .btn-fonte svg{width:17px;height:17px;flex:none}
+  .fonte .origem{
+    margin-top:14px;font-family:var(--fonte-num);font-size:.68rem;
+    color:var(--tinta-suave);word-break:break-all;line-height:1.5;
+  }
+
   /* foco acessível */
   a:focus-visible{outline:2px solid var(--ambar);outline-offset:3px;border-radius:4px}
 </style>
@@ -407,6 +438,21 @@
   <div class="nota">
     <span class="titn">Lembrete do seu "contador-advogado"</span>
     Este guia é um resumo direto da Convenção Coletiva 2025/2026 (Sincomerciários Santos × Sincomércio BSVR), que vale pra Bertioga. <b>Antes de fechar qualquer escala de domingo ou montar banco de horas, valida com o contador da família</b> — as regras de certificado nos sindicatos e os pisos por porte de empresa mudam conforme o CNPJ. Os valores em R$ são os exatos do documento.
+  </div>
+
+  <!-- ============ FONTE OFICIAL ============ -->
+  <div class="fonte">
+    <span class="selo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/></svg>
+      Documento oficial
+    </span>
+    <h3>Tudo isso veio daqui</h3>
+    <p>Nada foi inventado. Cada regra e valor saiu do PDF original publicado pelo sindicato patronal.</p>
+    <a class="btn-fonte" href="https://www.scvbs.com.br/images/upload/files/CONVEN%C3%87%C3%83O_COLETIVA_DE_TRABALHO_2025.2026_-_definitiva.pdf" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+      Abrir Convenção Coletiva (PDF)
+    </a>
+    <p class="origem">scvbs.com.br · Convenção Coletiva de Trabalho 2025/2026</p>
   </div>
 
 </div>
