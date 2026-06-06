@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Guia Rápido — Domingos, Feriados & Banco de Horas</title>
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=cabinet-grotesk@500,700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=cabinet-grotesk@500,700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
     --tinta:#1c1714;
@@ -30,8 +30,15 @@
     --fonte-texto:"DM Sans",sans-serif;
     --fonte-num:"Geist Mono",monospace;
   }
-  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html{scroll-behavior:smooth}
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent
+  }
+  html{
+    scroll-behavior:smooth
+  }
   body{
     font-family:var(--fonte-texto);
     background:
@@ -41,419 +48,939 @@
     color:var(--tinta);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
-    padding:0 0 80px;
+    padding:0 0 80px
   }
-  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  .wrap{
+    max-width:680px;
+    margin:0 auto;
+    padding:0 20px
+  }
 
-  /* ===== HEADER ===== */
-  header{padding:54px 0 30px;position:relative}
+  /* HEADER */
+  header{
+    padding:54px 0 30px;
+    position:relative
+  }
   .tag{
-    display:inline-flex;align-items:center;gap:7px;
-    font-family:var(--fonte-num);font-size:.7rem;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--ambar-forte);
-    background:var(--ambar-claro);padding:6px 12px;border-radius:6px;
-    border:1px solid #f4ddb9;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-family:var(--fonte-num);
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ambar-forte);
+    background:var(--ambar-claro);
+    padding:6px 12px;
+    border-radius:6px;
+    border:1px solid #f4ddb9
   }
-  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ambar);animation:pulse 2.4s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1)}}
+  .tag::before{
+    content:"";
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--ambar);
+    animation:pulse 2.4s ease-in-out infinite
+  }
+  @keyframes pulse{
+    0%,100%{
+      opacity:.4;
+      transform:scale(.85)
+    }
+    50%{
+      opacity:1;
+      transform:scale(1)
+    }
+  }
   h1{
-    font-family:var(--fonte-display);font-weight:700;
-    font-size:clamp(2.1rem,9vw,3.3rem);line-height:1.02;
-    letter-spacing:-.02em;margin:18px 0 12px;
+    font-family:var(--fonte-display);
+    font-weight:700;
+    font-size:clamp(2.1rem,9vw,3.3rem);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin:18px 0 12px
   }
-  h1 em{font-style:normal;color:var(--ambar-forte)}
-  .sub{font-size:1.02rem;color:var(--tinta-suave);max-width:46ch}
+  h1 em{
+    font-style:normal;
+    color:var(--ambar-forte)
+  }
+  .sub{
+    font-size:1.02rem;
+    color:var(--tinta-suave);
+    max-width:46ch
+  }
   .meta{
-    margin-top:22px;font-family:var(--fonte-num);font-size:.74rem;
-    color:var(--tinta-suave);display:flex;flex-wrap:wrap;gap:6px 16px;
-    padding-top:18px;border-top:1px solid var(--linha);
+    margin-top:22px;
+    font-family:var(--fonte-num);
+    font-size:.74rem;
+    color:var(--tinta-suave);
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    padding-top:18px;
+    border-top:1px solid var(--linha)
   }
-  .meta b{color:var(--tinta)}
+  .meta b{
+    color:var(--tinta)
+  }
 
-  /* ===== SEÇÃO ===== */
-  section{margin-top:46px}
-  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+  /* SEÇÕES */
+  section{
+    margin-top:46px
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:20px
+  }
   .sec-num{
-    font-family:var(--fonte-num);font-size:.78rem;font-weight:600;
-    color:var(--ambar);border:1.5px solid var(--ambar);
-    width:30px;height:30px;display:grid;place-items:center;border-radius:8px;flex:none;
+    font-family:var(--fonte-num);
+    font-size:.78rem;
+    font-weight:600;
+    color:var(--ambar);
+    border:1.5px solid var(--ambar);
+    width:30px;
+    height:30px;
+    display:grid;
+    place-items:center;
+    border-radius:8px;
+    flex:none
   }
   .sec-head h2{
-    font-family:var(--fonte-titulo);font-weight:700;
-    font-size:clamp(1.4rem,5.5vw,1.8rem);letter-spacing:-.01em;line-height:1.1;
+    font-family:var(--fonte-titulo);
+    font-weight:700;
+    font-size:clamp(1.4rem,5.5vw,1.8rem);
+    letter-spacing:-.01em;
+    line-height:1.1
   }
 
-  /* ===== CARDS ===== */
+  /* CARDS */
   .card{
-    background:var(--cartao);border:1px solid var(--linha);
-    border-radius:16px;padding:22px 20px;box-shadow:var(--sombra);
-    margin-bottom:14px;animation:rise .5s cubic-bezier(.25,.46,.45,.94) both;
+    background:var(--cartao);
+    border:1px solid var(--linha);
+    border-radius:16px;
+    padding:22px 20px;
+    box-shadow:var(--sombra);
+    margin-bottom:14px;
+    animation:rise .5s cubic-bezier(.25,.46,.45,.94) both
   }
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-  .card h3{font-family:var(--fonte-titulo);font-weight:700;font-size:1.12rem;margin-bottom:8px;letter-spacing:-.01em}
-  .card p{color:var(--tinta-suave);font-size:.97rem}
-  .card p + p{margin-top:8px}
-  .card strong{color:var(--tinta);font-weight:600}
+  @keyframes rise{
+    from{
+      opacity:0;
+      transform:translateY(14px)
+    }
+    to{
+      opacity:1;
+      transform:translateY(0)
+    }
+  }
+  .card h3{
+    font-family:var(--fonte-titulo);
+    font-weight:700;
+    font-size:1.12rem;
+    margin-bottom:8px;
+    letter-spacing:-.01em
+  }
+  .card p{
+    color:var(--tinta-suave);
+    font-size:.97rem
+  }
+  .card p+ p{
+    margin-top:8px
+  }
+  .card strong{
+    color:var(--tinta);
+    font-weight:600
+  }
 
-  /* tipos de card */
-  .pay{border-left:3px solid var(--ambar)}
-  .ok{border-left:3px solid var(--verde)}
-  .no{border-left:3px solid var(--vermelho)}
-  .info{border-left:3px solid var(--azul)}
-
+  /* diferentes tipos de cards */
+  .pay{
+    border-left:3px solid var(--ambar)
+  }
+  .ok{
+    border-left:3px solid var(--verde)
+  }
+  .no{
+    border-left:3px solid var(--vermelho)
+  }
+  .info{
+    border-left:3px solid var(--azul)
+  }
   .badge{
-    display:inline-flex;align-items:center;gap:6px;
-    font-family:var(--fonte-num);font-size:.66rem;letter-spacing:.06em;
-    text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:5px;margin-bottom:12px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--fonte-num);
+    font-size:.66rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:4px 9px;
+    border-radius:5px;
+    margin-bottom:12px
   }
-  .b-pay{background:var(--ambar-claro);color:var(--ambar-forte)}
-  .b-ok{background:var(--verde-claro);color:var(--verde)}
-  .b-no{background:var(--vermelho-claro);color:var(--vermelho)}
-  .b-info{background:var(--azul-claro);color:var(--azul)}
-
-  /* valor em destaque */
+  .b-pay{
+    background:var(--ambar-claro);
+    color:var(--ambar-forte)
+  }
+  .b-ok{
+    background:var(--verde-claro);
+    color:var(--verde)
+  }
+  .b-no{
+    background:var(--vermelho-claro);
+    color:var(--vermelho)
+  }
+  .b-info{
+    background:var(--azul-claro);
+    color:var(--azul)
+  }
+  /* destaque do valor */
   .valor{
-    font-family:var(--fonte-num);font-weight:600;font-size:1.65rem;
-    color:var(--tinta);letter-spacing:-.02em;display:block;margin:6px 0 2px;
+    font-family:var(--fonte-num);
+    font-weight:600;
+    font-size:1.65rem;
+    color:var(--tinta);
+    letter-spacing:-.02em;
+    display:block;
+    margin:6px 0 2px
   }
-  .valor small{font-size:.8rem;color:var(--tinta-suave);font-weight:500;letter-spacing:0}
-
+  .valor small{
+    font-size:.8rem;
+    color:var(--tinta-suave);
+    font-weight:500;
+    letter-spacing:0
+  }
   /* lista limpa */
-  ul.clean{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:9px}
-  ul.clean li{position:relative;padding-left:22px;font-size:.95rem;color:var(--tinta-suave)}
-  ul.clean li::before{
-    content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
-    border-radius:2px;background:var(--ambar);transform:rotate(45deg);
+  ul.clean{
+    list-style:none;
+    margin-top:10px;
+    display:flex;
+    flex-direction:column;
+    gap:9px
   }
-  ul.clean li strong{color:var(--tinta)}
-
-  /* tabela escalas */
-  .escala{display:grid;gap:10px;margin-top:6px}
+  ul.clean li{
+    position:relative;
+    padding-left:22px;
+    font-size:.95rem;
+    color:var(--tinta-suave)
+  }
+  ul.clean li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:9px;
+    width:7px;
+    height:7px;
+    border-radius:2px;
+    background:var(--ambar);
+    transform:rotate(45deg)
+  }
+  ul.clean li strong{
+    color:var(--tinta)
+  }
+  /* tabela de escala */
+  .escala{
+    display:grid;
+    gap:10px;
+    margin-top:6px
+  }
   .escala-item{
-    display:flex;align-items:center;gap:14px;
-    background:var(--ambar-claro);border:1px solid #f4ddb9;
-    border-radius:10px;padding:12px 14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--ambar-claro);
+    border:1px solid #f4ddb9;
+    border-radius:10px;
+    padding:12px 14px
   }
   .escala-item .code{
-    font-family:var(--fonte-num);font-weight:600;font-size:1.05rem;
-    color:var(--ambar-forte);flex:none;min-width:42px;
+    font-family:var(--fonte-num);
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ambar-forte);
+    flex:none;
+    min-width:42px
   }
-  .escala-item span{font-size:.9rem;color:var(--tinta-suave)}
-
-  /* destaque proibido total */
+  .escala-item span{
+    font-size:.9rem;
+    color:var(--tinta-suave)
+  }
+  /* alerta total proibido */
   .alerta{
-    background:var(--vermelho);color:#fff;border-radius:16px;
-    padding:22px 20px;box-shadow:var(--sombra);margin-bottom:14px;
+    background:var(--vermelho);
+    color:#fff;
+    border-radius:16px;
+    padding:22px 20px;
+    box-shadow:var(--sombra);
+    margin-bottom:14px
   }
-  .alerta .badge{background:rgba(255,255,255,.18);color:#fff}
-  .alerta h3{color:#fff}
-  .alerta p{color:rgba(255,255,255,.85)}
-  .alerta strong{color:#fff}
-
+  .alerta .badge{
+    background:rgba(255,255,255,.18);
+    color:#fff
+  }
+  .alerta h3{
+    color:#fff
+  }
+  .alerta p{
+    color:rgba(255,255,255,.85)
+  }
+  .alerta strong{
+    color:#fff
+  }
   /* nota de rodapé */
   .nota{
-    margin-top:60px;padding:22px 20px;border-radius:16px;
-    background:#1c1714;color:#cfc4ba;font-size:.86rem;line-height:1.6;
+    margin-top:60px;
+    padding:22px 20px;
+    border-radius:16px;
+    background:#1c1714;
+    color:#cfc4ba;
+    font-size:.86rem;
+    line-height:1.6
   }
-  .nota b{color:#f0c98a}
-  .nota .titn{font-family:var(--fonte-titulo);font-weight:700;color:#fff;font-size:1rem;margin-bottom:8px;display:block}
+  .nota b{
+    color:#f0c98a
+  }
+  .nota .titn{
+    font-family:var(--fonte-titulo);
+    font-weight:700;
+    color:#fff;
+    font-size:1rem;
+    margin-bottom:8px;
+    display:block
+  }
 
-  /* ===== FONTE OFICIAL ===== */
+  /* botão fonte oficial + selo credibilidade */
   .fonte{
-    margin-top:14px;padding:24px 20px;border-radius:16px;
-    background:var(--cartao);border:1px solid var(--linha);
-    box-shadow:var(--sombra);text-align:center;
+    margin-top:14px;
+    padding:24px 20px;
+    border-radius:16px;
+    background:var(--cartao);
+    border:1px solid var(--linha);
+    box-shadow:var(--sombra);
+    text-align:center
   }
   .fonte .selo{
-    display:inline-flex;align-items:center;gap:7px;
-    font-family:var(--fonte-num);font-size:.66rem;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--verde);
-    background:var(--verde-claro);padding:5px 11px;border-radius:5px;margin-bottom:14px;font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-family:var(--fonte-num);
+    font-size:.66rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--verde);
+    background:var(--verde-claro);
+    padding:5px 11px;
+    border-radius:5px;
+    margin-bottom:14px;
+    font-weight:600
   }
-  .fonte .selo svg{width:13px;height:13px}
-  .fonte h3{font-family:var(--fonte-titulo);font-weight:700;font-size:1.12rem;margin-bottom:6px;letter-spacing:-.01em}
-  .fonte p{color:var(--tinta-suave);font-size:.93rem;max-width:42ch;margin:0 auto 18px}
+  .fonte .selo svg{
+    width:13px;
+    height:13px
+  }
+  .fonte h3{
+    font-family:var(--fonte-titulo);
+    font-weight:700;
+    font-size:1.12rem;
+    margin-bottom:6px;
+    letter-spacing:-.01em
+  }
+  .fonte p{
+    color:var(--tinta-suave);
+    font-size:.93rem;
+    max-width:42ch;
+    margin:0 auto 18px
+  }
   .btn-fonte{
-    display:inline-flex;align-items:center;gap:9px;
-    background:var(--tinta);color:#fff;text-decoration:none;
-    font-family:var(--fonte-titulo);font-weight:500;font-size:.96rem;
-    padding:14px 22px;border-radius:11px;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    background:var(--tinta);
+    color:#fff;
+    text-decoration:none;
+    font-family:var(--fonte-titulo);
+    font-weight:500;
+    font-size:.96rem;
+    padding:14px 22px;
+    border-radius:11px;
     transition:all .2s cubic-bezier(.25,.46,.45,.94);
-    box-shadow:0 4px 14px rgba(28,23,20,.18);
+    box-shadow:0 4px 14px rgba(28,23,20,.18)
   }
-  .btn-fonte:hover{background:var(--ambar-forte);transform:translateY(-2px);box-shadow:0 8px 22px rgba(196,112,13,.32)}
-  .btn-fonte:active{transform:translateY(0)}
-  .btn-fonte svg{width:17px;height:17px;flex:none}
+  .btn-fonte:hover{
+    background:var(--ambar-forte);
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(196,112,13,.32)
+  }
+  .btn-fonte svg{
+    width:17px;
+    height:17px
+  }
+  a:focus-visible{
+    outline:2px solid var(--ambar);
+    outline-offset:3px;
+    border-radius:4px
+  }
+  /* rodapé com link fonte */
   .fonte .origem{
-    margin-top:14px;font-family:var(--fonte-num);font-size:.68rem;
-    color:var(--tinta-suave);word-break:break-all;line-height:1.5;
+    margin-top:14px;
+    font-family:var(--fonte-num);
+    font-size:.68rem;
+    color:var(--tinta-suave);
+    word-break:break-all;
+    line-height:1.5
+  }
+  /* link com botão para PDF no final */
+  .fonte-final{
+    margin-top:24px;
+    text-align:center
+  }
+  .link-pdf{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 20px;
+    background:#1c1714;
+    color:#f0c98a;
+    text-decoration:none;
+    border-radius:8px;
+    font-family:var(--fonte-titulo);
+    font-weight:600;
+    transition:background .2s;
+  }
+  .link-pdf:hover{
+    background:var(--ambar-forte)
+  }
+  .link-pdf svg{
+    width:20px;
+    height:20px
   }
 
-  /* foco acessível */
-  a:focus-visible{outline:2px solid var(--ambar);outline-offset:3px;border-radius:4px}
+  /* ===== SEÇÃO ATUALIZAÇÃO 2026 (NOVA) ===== */
+  .atualiza{
+    margin-top:34px;
+    position:relative;
+    background:
+      radial-gradient(130% 120% at 0% 0%, #2a221c 0%, #1c1714 60%);
+    border-radius:20px;
+    padding:26px 22px 24px;
+    box-shadow:0 10px 34px rgba(28,23,20,.22);
+    overflow:hidden;
+    animation:rise .55s cubic-bezier(.25,.46,.45,.94) both
+  }
+  .atualiza::before{
+    content:"";
+    position:absolute;
+    top:-40px;
+    right:-40px;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(224,138,30,.35), transparent 70%);
+    filter:blur(6px)
+  }
+  .atualiza .selo-novo{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-family:var(--fonte-num);
+    font-size:.66rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:#1c1714;
+    background:linear-gradient(135deg,#f0c98a,#e08a1e);
+    padding:6px 12px;
+    border-radius:6px;
+    position:relative;
+    z-index:1
+  }
+  .atualiza .selo-novo::before{
+    content:"";
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#1c1714;
+    animation:pulse 2s ease-in-out infinite
+  }
+  .atualiza h2{
+    font-family:var(--fonte-display);
+    font-weight:700;
+    color:#fff;
+    font-size:clamp(1.5rem,6vw,2rem);
+    line-height:1.05;
+    letter-spacing:-.02em;
+    margin:16px 0 8px;
+    position:relative;
+    z-index:1
+  }
+  .atualiza h2 em{
+    font-style:normal;
+    color:#f0c98a
+  }
+  .atualiza .lead{
+    color:#cfc4ba;
+    font-size:.98rem;
+    max-width:48ch;
+    position:relative;
+    z-index:1
+  }
+  /* mini-cards dentro da seção escura */
+  .ac{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(240,201,138,.16);
+    border-radius:13px;
+    padding:16px 16px;
+    margin-top:12px;
+    position:relative;
+    z-index:1
+  }
+  .ac:first-of-type{
+    margin-top:20px
+  }
+  .ac .ac-tag{
+    display:inline-flex;
+    align-items:center;
+    font-family:var(--fonte-num);
+    font-size:.62rem;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:3px 8px;
+    border-radius:4px;
+    margin-bottom:9px
+  }
+  .ac-historia{ background:rgba(43,111,143,.22); color:#9fd2e6 }
+  .ac-hoje{ background:rgba(224,138,30,.22); color:#f0c98a }
+  .ac-boa{ background:rgba(63,125,82,.24); color:#9fd9b0 }
+  .ac-erro{ background:rgba(192,57,43,.24); color:#f0a79e }
+  .ac h4{
+    font-family:var(--fonte-titulo);
+    font-weight:700;
+    color:#fff;
+    font-size:1.04rem;
+    margin-bottom:6px;
+    letter-spacing:-.01em
+  }
+  .ac p{
+    color:#bdb2a8;
+    font-size:.93rem;
+    line-height:1.55
+  }
+  .ac p + p{ margin-top:7px }
+  .ac strong{ color:#f0c98a; font-weight:600 }
+  .ac ul{
+    list-style:none;
+    margin-top:9px;
+    display:flex;
+    flex-direction:column;
+    gap:7px
+  }
+  .ac ul li{
+    position:relative;
+    padding-left:20px;
+    font-size:.91rem;
+    color:#bdb2a8
+  }
+  .ac ul li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:8px;
+    width:6px;
+    height:6px;
+    border-radius:2px;
+    background:#e08a1e;
+    transform:rotate(45deg)
+  }
+  .ac ul li strong{ color:#fff }
+  /* linha do tempo */
+  .timeline{
+    margin-top:14px;
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    gap:0
+  }
+  .tl-item{
+    position:relative;
+    padding:0 0 16px 26px;
+    border-left:2px solid rgba(240,201,138,.22)
+  }
+  .tl-item:last-child{ border-left-color:transparent; padding-bottom:0 }
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:2px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#1c1714;
+    border:2px solid #e08a1e
+  }
+  .tl-item.done::before{ background:#e08a1e }
+  .tl-item .tl-data{
+    font-family:var(--fonte-num);
+    font-size:.7rem;
+    font-weight:600;
+    color:#f0c98a;
+    letter-spacing:.04em
+  }
+  .tl-item .tl-txt{
+    color:#bdb2a8;
+    font-size:.9rem;
+    margin-top:2px
+  }
+  /* botões de fonte dentro da seção escura */
+  .ac-fontes{
+    margin-top:18px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    position:relative;
+    z-index:1
+  }
+  .ac-fontes a{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(240,201,138,.22);
+    color:#f0c98a;
+    text-decoration:none;
+    font-family:var(--fonte-num);
+    font-size:.72rem;
+    font-weight:600;
+    padding:9px 13px;
+    border-radius:8px;
+    transition:all .2s
+  }
+  .ac-fontes a:hover{
+    background:rgba(224,138,30,.18);
+    border-color:#e08a1e;
+    transform:translateY(-1px)
+  }
+  .ac-fontes a svg{ width:13px; height:13px; flex:none }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <span class="tag">Convenção Coletiva 2025 / 2026</span>
-    <h1>Domingos, feriados &amp; <em>banco de horas</em></h1>
-    <p class="sub">O que pagar, quem folga e o que você não pode fazer de jeito nenhum. Guia rápido pra loja.</p>
-    <div class="meta">
-      <span><b>Vale:</b> Paulifest &amp; ModaFantasy (Bertioga)</span>
-      <span><b>Vigência:</b> 01/10/2025 → 30/09/2026</span>
-    </div>
-  </header>
+<header>
+  <span class="tag">Convenção Coletiva 2025 / 2026</span>
+  <h1>Domingos, feriados &amp; <em>banco de horas</em></h1>
+  <p class="sub">O que pagar, quem folga e o que você não pode fazer de jeito nenhum. Guia rápido pra loja.</p>
+  <div class="meta">
+    <span><b>Vale:</b> Paulifest &amp; ModaFantasy (Bertioga)</span>
+    <span><b>Vigência:</b> 01/10/2025 → 30/09/2026</span>
+  </div>
+</header>
 
-  <!-- ============ DOMINGOS ============ -->
-  <section>
-    <div class="sec-head"><div class="sec-num">01</div><h2>Trabalho aos domingos</h2></div>
+<!-- ===== SEÇÃO NOVA: ATUALIZAÇÃO 2026 ===== -->
+<section class="atualiza">
+  <span class="selo-novo">Atualização · Junho 2026</span>
+  <h2>A nova regra do <em>trabalho em feriado</em> (Portaria 3.665)</h2>
+  <p class="lead">Seu contador comentou de uma "proibição que ia entrar em junho/julho". É real, mas a história é mais comprida do que parece. Aqui tá tudo certinho.</p>
 
-    <div class="card info">
-      <span class="badge b-info">A regra base</span>
-      <h3>Domingo é facultativo</h3>
-      <p>Ninguém é obrigado a trabalhar no domingo. A loja pode abrir, mas a escala é responsabilidade sua. Jornada no domingo <strong>não pode passar de 8 horas</strong> e precisa de <strong>1 hora de descanso</strong> no mínimo.</p>
-    </div>
-
-    <div class="card ok">
-      <span class="badge b-ok">Folga obrigatória</span>
-      <h3>Quem trabalha no domingo, folga na semana</h3>
-      <p>Toda vez que alguém trabalha num domingo, você <strong>deve dar uma folga inteira (24h)</strong> na mesma semana. E mais: a escala é <strong>6 dias de trabalho por 1 de descanso</strong> (a famosa 6x1).</p>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Você precisa pagar</span>
-      <h3>Vale-refeição do domingo</h3>
-      <p>Pra quem trabalhar no domingo (e feriado), você paga vale-refeição:</p>
-      <span class="valor">R$ 31,72 <small>/ até 4 horas de jornada</small></span>
-      <span class="valor">R$ 63,49 <small>/ acima de 4 horas</small></span>
-      <p style="margin-top:10px">Se a loja tiver refeitório próprio, fica isento. <strong>Marmita é proibida.</strong></p>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Você precisa pagar</span>
-      <h3>Vale-transporte do domingo</h3>
-      <p>Domingo e feriado trabalhado também tem <strong>vale-transporte</strong>. Sem exceção.</p>
-    </div>
-
-    <div class="card">
-      <h3>Os 3 jeitos de montar a escala de domingo</h3>
-      <p style="margin-bottom:14px">Escolha um sistema de revezamento:</p>
-      <div class="escala">
-        <div class="escala-item"><span class="code">1×1</span><span>Trabalha 1 domingo, folga o próximo.</span></div>
-        <div class="escala-item"><span class="code">2×1</span><span>Trabalha 2 domingos, folga 1.</span></div>
-        <div class="escala-item"><span class="code">2×2</span><span>Trabalha 2 domingos, folga 2.</span></div>
-      </div>
-      <ul class="clean">
-        <li>A escala de folgas precisa ficar <strong>colada na parede, visível, com 30 dias de antecedência</strong>.</li>
-        <li>A folga da semana <strong>não pode</strong> ser trocada por feriado.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ FERIADOS ============ -->
-  <section>
-    <div class="sec-head"><div class="sec-num">02</div><h2>Feriados</h2></div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Você precisa pagar</span>
-      <h3>Feriado trabalhado vale dobrado</h3>
-      <p>Quem trabalha em feriado municipal, estadual ou federal recebe a hora <strong>+ 100%</strong> (ou seja, em dobro).</p>
-      <span class="valor">+100% <small>na hora trabalhada no feriado</small></span>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Caso especial</span>
-      <h3>1º de Maio é mais caro ainda</h3>
-      <p>No feriado do Dia do Trabalho, a hora vale <strong>+ 150%</strong>.</p>
-      <span class="valor">+150% <small>só no 1º de Maio</small></span>
-    </div>
-
-    <div class="alerta">
-      <span class="badge">Proibido total</span>
-      <h3>Ninguém trabalha nesses 2 dias</h3>
-      <p><strong>25 de dezembro (Natal)</strong> e <strong>1º de janeiro (Ano Novo)</strong>. Loja fechada para os funcionários. Sem exceção.</p>
-    </div>
-
-    <div class="card info">
-      <span class="badge b-info">Horário curto</span>
-      <h3>24 e 31 de dezembro: só até as 18h</h3>
-      <p>Nessas duas datas, o expediente do funcionário vai <strong>no máximo até as 18 horas</strong>.</p>
-    </div>
-
-    <div class="card">
-      <h3>Detalhes que não podem escapar</h3>
-      <ul class="clean">
-        <li>Hora extra em domingo/feriado <strong>não pode ser compensada</strong> com folga — tem que ser paga.</li>
-        <li>Em dia de <strong>eleição</strong>, o funcionário tem direito de votar sem perder salário.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ BANCO DE HORAS ============ -->
-  <section>
-    <div class="sec-head"><div class="sec-num">03</div><h2>Banco de horas</h2></div>
-
-    <div class="card info">
-      <span class="badge b-info">Como funciona</span>
-      <h3>Compensar hora extra com folga</h3>
-      <p>Em vez de pagar a hora extra, você pode "guardar" e trocar por folga depois. Mas tem limites bem rígidos:</p>
-      <ul class="clean">
-        <li>Prazo de <strong>1 ano</strong> pra zerar o saldo.</li>
-        <li>Limite de <strong>60 horas por mês</strong>.</li>
-        <li>No máximo <strong>2 horas extras por dia</strong>.</li>
-      </ul>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Atenção: tem custo</span>
-      <h3>O banco de horas aqui NÃO é de graça</h3>
-      <p>Diferente do banco comum, esta convenção manda <strong>pagar o adicional (60%) sobre as horas compensadas todo mês</strong>, além da folga. Ou seja, você dá a folga <strong>e</strong> paga o extra.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Burocracia obrigatória</span>
-      <h3>Precisa de certificado dos 2 sindicatos</h3>
-      <p>Pra valer, o banco de horas tem que ser <strong>registrado por aditivo nos dois sindicatos</strong>, com lista de funcionários, horários e prazos. Sem esse certificado, o banco <strong>não é válido</strong>.</p>
-    </div>
-
-    <div class="card ok">
-      <span class="badge b-ok">A favor do funcionário</span>
-      <h3>Se sobrar hora ao final do ano</h3>
-      <p>Horas extras não compensadas viram <strong>pagamento + 60%</strong>. Já as horas negativas (que o funcionário deve) <strong>são zeradas, sem desconto</strong> dele.</p>
-    </div>
-
-    <div class="card info">
-      <span class="badge b-info">Menor de idade</span>
-      <h3>Funcionário menor de 18 anos</h3>
-      <p>Banco de horas pra menor de 18 só com <strong>autorização escrita do responsável legal</strong>. E o trabalho só pode ser de dia.</p>
-    </div>
-  </section>
-
-  <!-- ============ MEXE NO CAIXA ============ -->
-  <section>
-    <div class="sec-head"><div class="sec-num">04</div><h2>Outros custos escondidos</h2></div>
-    <p style="color:var(--tinta-suave);margin:-8px 0 20px;font-size:.95rem">Coisas que não são domingo nem feriado, mas mexem direto no seu caixa.</p>
-
-    <div class="card pay">
-      <span class="badge b-pay">Pagamento único</span>
-      <h3>Contribuição Assistencial Patronal</h3>
-      <p>A empresa paga uma taxa pro sindicato patronal, conforme o porte. Venceu em <strong>31/10/2025</strong> (em atraso, +2%):</p>
-      <ul class="clean">
-        <li><strong>EPP</strong> (Pequeno Porte): R$ 699,00</li>
-        <li><strong>ME</strong> (Microempresa): R$ 499,00</li>
-        <li><strong>Sem empregados:</strong> R$ 399,00</li>
-        <li><strong>MEI:</strong> R$ 159,00</li>
-      </ul>
-      <p style="margin-top:10px">Cada loja paga a sua (Paulifest e ModaFantasy contam separado se forem CNPJs diferentes).</p>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Desconto na folha</span>
-      <h3>Contribuição Assistencial do funcionário</h3>
-      <p>Você desconta do salário do funcionário <strong>5% do piso, no máximo R$ 145,00</strong>, e repassa ao sindicato dos empregados (recolhe até 15/12/2025). Se o funcionário não fizer oposição formal, é obrigatório descontar.</p>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Pagamento anual</span>
-      <h3>Bônus do Dia do Comerciário (30/10)</h3>
-      <p>Gratificação extra em outubro:</p>
-      <ul class="clean">
-        <li><strong>Até 180 dias de casa:</strong> 1/30 do salário do mês.</li>
-        <li><strong>Mais de 180 dias:</strong> 2/30 do salário do mês.</li>
-      </ul>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Hora extra normal</span>
-      <h3>Adicional de hora extra: 60%</h3>
-      <p>Toda hora que passa da jornada normal vale <strong>+60%</strong> (não é 50%). E se for 2h ou mais de extra, você <strong>fornece uma refeição comercial</strong>.</p>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Se tiver caixa</span>
-      <h3>Quem opera o caixa ganha a mais</h3>
-      <ul class="clean">
-        <li><strong>Quebra de caixa:</strong> +10% do piso por mês.</li>
-        <li><strong>Recebe contas de terceiros</strong> (tipo correspondente bancário): +10% por mês.</li>
-      </ul>
-    </div>
-
-    <div class="card pay">
-      <span class="badge b-pay">Função extra</span>
-      <h3>Acúmulo de função: +10%</h3>
-      <p>Se o funcionário faz duas funções diferentes, ganha <strong>+10% do salário</strong>.</p>
-    </div>
-
-    <div class="card info">
-      <span class="badge b-info">Seu caso, Gustavo</span>
-      <h3>Funcionário jovem (16 a 18 anos)</h3>
-      <p>Empacotador ou office-boy de 16 a 18 anos, estudante, com jornada de 6h: piso de <strong>R$ 1.523,27</strong> (nunca abaixo do mínimo). E atenção: <strong>é proibido fazer hora extra</strong> com ele.</p>
-    </div>
-  </section>
-
-  <!-- ============ PROIBIDO ============ -->
-  <section>
-    <div class="sec-head"><div class="sec-num">05</div><h2>O que você NÃO pode fazer</h2></div>
-
-    <div class="card no">
-      <span class="badge b-no">Proibido</span>
-      <h3>Trabalhar 25/12 e 01/01</h3>
-      <p>Funcionário em Natal ou Ano Novo: <strong>proibido</strong>.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Proibido</span>
-      <h3>Trocar a folga semanal por feriado</h3>
-      <p>A folga da 6x1 é sagrada. Feriado não conta como folga.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Proibido</span>
-      <h3>Banco de horas sem registro</h3>
-      <p>Sem certificado dos dois sindicatos, o banco não vale e vira hora extra a pagar.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Proibido</span>
-      <h3>Hora extra com estudante no horário da escola</h3>
-      <p>Não pode mudar horário nem pedir extra que bata com o horário escolar.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Proibido</span>
-      <h3>Marmita no lugar do vale-refeição</h3>
-      <p>No domingo/feriado é vale em dinheiro ou refeitório próprio. Marmita, nunca.</p>
-    </div>
-
-    <div class="card no">
-      <span class="badge b-no">Cuidado: multa pesada</span>
-      <h3>Descumprir qualquer regra</h3>
-      <p>Cada deslize gera multa: <strong>25% do piso por funcionário</strong>, por infração, a favor do trabalhador. Multiplica rápido.</p>
-    </div>
-  </section>
-
-  <!-- ============ NOTA ============ -->
-  <div class="nota">
-    <span class="titn">Lembrete do seu "contador-advogado"</span>
-    Este guia é um resumo direto da Convenção Coletiva 2025/2026 (Sincomerciários Santos × Sincomércio BSVR), que vale pra Bertioga. <b>Antes de fechar qualquer escala de domingo ou montar banco de horas, valida com o contador da família</b> — as regras de certificado nos sindicatos e os pisos por porte de empresa mudam conforme o CNPJ. Os valores em R$ são os exatos do documento.
+  <div class="ac">
+    <span class="ac-tag ac-historia">De onde vem</span>
+    <h4>O que é essa portaria</h4>
+    <p>A <strong>Portaria 3.665/2023</strong> do Ministério do Trabalho mudou a regra do comércio abrir em <strong>feriado</strong>. Na gestão anterior (Portaria 671/2021), a loja abria em feriado de boa, com acordo direto com o funcionário, sem precisar de sindicato.</p>
+    <p>A nova portaria <strong>acabou com essa liberdade</strong>: pra abrir em feriado, voltou a ser obrigatório ter <strong>convenção coletiva</strong> — ou seja, autorização do sindicato. Isso vale pra supermercados, farmácias, atacadistas e o comércio em geral.</p>
   </div>
 
-  <!-- ============ FONTE OFICIAL ============ -->
-  <div class="fonte">
-    <span class="selo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/></svg>
-      Documento oficial
-    </span>
-    <h3>Tudo isso veio daqui</h3>
-    <p>Nada foi inventado. Cada regra e valor saiu do PDF original publicado pelo sindicato patronal.</p>
-    <a class="btn-fonte" href="https://www.scvbs.com.br/images/upload/files/CONVEN%C3%87%C3%83O_COLETIVA_DE_TRABALHO_2025.2026_-_definitiva.pdf" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
-      Abrir Convenção Coletiva (PDF)
+  <div class="ac">
+    <span class="ac-tag ac-hoje">O que tá valendo agora</span>
+    <h4>Já entrou em vigor — desde 1º de junho de 2026</h4>
+    <p>A regra foi <strong>adiada cinco vezes</strong> por pressão do comércio, mas finalmente passou a valer em <strong>1º/06/2026</strong>. O <strong>Corpus Christi (04/06/2026)</strong> foi o primeiro feriado com ela rodando de verdade.</p>
+    <p>Na prática: pra abrir em feriado, a loja <strong>precisa de convenção coletiva</strong> autorizando. Acordo direto com o funcionário não vale mais. Quem descumprir leva multa, autuação e risco de processo trabalhista.</p>
+  </div>
+
+  <div class="ac">
+    <span class="ac-tag ac-boa">A boa notícia pra gente</span>
+    <h4>Paulifest e ModaFantasy estão cobertas</h4>
+    <p>Aqui o caso fica tranquilo: a <strong>cláusula 77</strong> da sua Convenção 2025/2026 já autoriza expressamente o trabalho em domingos e feriados, com pagamento dobrado, folga compensatória e escalas (1×1, 2×1, 2×2).</p>
+    <p>Ou seja, o seu sindicato já fez exatamente o que a portaria exige. <strong>Na prática, pra você não muda quase nada</strong> — pode continuar abrindo em feriado, desde que respeite a cláusula 77 (que é o que este guia inteiro já cobre).</p>
+  </div>
+
+  <div class="ac">
+    <span class="ac-tag ac-erro">Onde o contador se confundiu</span>
+    <h4>Dois pontinhos pra alinhar com ele</h4>
+    <ul>
+      <li>A regra é sobre <strong>feriado</strong>, não sobre domingo comum — domingo já era regulado por convenção há tempos.</li>
+      <li>A data não foi julho de 2025 (aquilo foi adiado). Está <strong>valendo desde 1º de junho de 2026</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="ac">
+    <span class="ac-tag ac-hoje">Fique de olho nisso</span>
+    <h4>O detalhe da renovação</h4>
+    <p>Sua convenção vai até <strong>30/09/2026</strong>. Quando renovar (a partir de outubro), <strong>confirme com o contador se a cláusula de domingos e feriados continua na convenção nova</strong>. Se ela cair fora numa renovação futura, aí sim você perde a autorização e não pode abrir em feriado. Hoje tá garantido — é só checar todo ano.</p>
+  </div>
+
+  <!-- Linha do tempo -->
+  <div class="timeline">
+    <div class="tl-item done">
+      <div class="tl-data">NOV / 2023</div>
+      <div class="tl-txt">Portaria 3.665 publicada — volta a exigir convenção coletiva pra feriado.</div>
+    </div>
+    <div class="tl-item done">
+      <div class="tl-data">JUL / 2025</div>
+      <div class="tl-txt">Ia entrar em vigor aqui — adiada por pressão do comércio.</div>
+    </div>
+    <div class="tl-item done">
+      <div class="tl-data">FEV / 2026</div>
+      <div class="tl-txt">Novo adiamento + criação de grupo de trabalho (GT Comércio Varejista).</div>
+    </div>
+    <div class="tl-item done">
+      <div class="tl-data">01 / JUN / 2026</div>
+      <div class="tl-txt">Regra entra em vigor de vez.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-data">04 / JUN / 2026</div>
+      <div class="tl-txt">Corpus Christi — primeiro feriado com a regra valendo.</div>
+    </div>
+  </div>
+
+  <!-- Fontes -->
+  <div class="ac-fontes">
+    <a href="https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/junho/mte-prorroga-para-1o-de-marco-de-2026-regra-sobre-trabalho-em-feriados-no-comercio" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      MTE (gov.br)
     </a>
-    <p class="origem">scvbs.com.br · Convenção Coletiva de Trabalho 2025/2026</p>
+    <a href="https://oglobo.globo.com/economia/noticia/2026/06/04/corpus-christi-e-o-primeiro-feriado-com-nova-regra-de-trabalho-do-comercio-entenda.ghtml" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      O Globo
+    </a>
+    <a href="https://www.legisweb.com.br/legislacao/?id=491390" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Portaria 356
+    </a>
+    <a href="https://exame.com/economia/nova-regra-sobre-trabalho-em-feriados-deve-entrar-em-vigor-em-marco/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Exame
+    </a>
   </div>
+</section>
+
+<!-- Seção trabalho aos domingos -->
+<section>
+  <div class="sec-head"><div class="sec-num">01</div><h2>Trabalho aos domingos</h2></div>
+  <div class="card info">
+    <span class="badge b-info">A regra base</span>
+    <h3>Domingo é facultativo</h3>
+    <p>Você não é obrigado a trabalhar no domingo. Pode abrir, mas é sua responsabilidade fazer a escala. Limite de 8 horas no domingo e 1 hora de descanso mínimo.</p>
+  </div>
+  <div class="card ok">
+    <span class="badge b-ok">Folga obrigatória</span>
+    <h3>Quem trabalha no domingo, folga na semana</h3>
+    <p>Se alguém trabalha no domingo, deve tirar um dia inteiro (24h) de folga na mesma semana. E o esquema é: 6 dias de trabalho por 1 de folga (6x1).</p>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Você precisa pagar</span>
+    <h3>Vale-refeição no domingo</h3>
+    <p>Se trabalhar no domingo ou feriado, paga vale-refeição:</p>
+    <span class="valor">R$ 31,72 <small>/ até 4h</small></span>
+    <span class="valor">R$ 63,49 <small>/ acima de 4h</small></span>
+    <p>Se tiver refeitório próprio, fica isento de pagar. Marmita é proibida.</p>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Você precisa pagar</span>
+    <h3>Vale-transporte no domingo</h3>
+    <p>Tem que pagar vale-transporte para quem trabalha no domingo ou feriado, sem exceções.</p>
+  </div>
+  <div class="card">
+    <h3>Como montar a escala de domingo</h3>
+    <p>Escolha um modo de revezamento:</p>
+    <div class="escala">
+      <div class="escala-item"><span class="code">1×1</span><span>Trabalha 1 domingo, folga o próximo.</span></div>
+      <div class="escala-item"><span class="code">2×1</span><span>Trabalha 2 domingos, folga 1.</span></div>
+      <div class="escala-item"><span class="code">2×2</span><span>Trabalha 2 domingos, folga 2.</span></div>
+    </div>
+    <ul class="clean">
+      <li>A escala de folgas deve estar visível na parede com 30 dias de antecedência.</li>
+      <li>A folga da semana não pode ser trocada por feriado.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Seção feriados -->
+<section>
+  <div class="sec-head"><div class="sec-num">02</div><h2>Feriados</h2></div>
+  <div class="card pay">
+    <span class="badge b-pay">Você precisa pagar</span>
+    <h3>Feriado trabalhado vale dobrado</h3>
+    <p>Se trabalhar em feriado municipal, estadual ou federal, a hora fica com +100% (em dobro).</p>
+    <span class="valor">+100% <small>no feriado</small></span>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Caso especial</span>
+    <h3>Dia do Trabalho fica mais caro</h3>
+    <p>No 1º de Maio, a hora vale +150%.</p>
+    <span class="valor">+150% <small>no 1º de Maio</small></span>
+  </div>
+  <div class="alerta">
+    <span class="badge">Proibido total</span>
+    <h3>Ninguém trabalha nesses dias</h3>
+    <p>Em 25/12 (Natal) e 1/1 (Ano Novo), está proibido trabalhar. Loja fechada pra todos.</p>
+  </div>
+  <div class="card info">
+    <span class="badge b-info">Horário curto</span>
+    <h3>24 e 31 de dezembro: até às 18h</h3>
+    <p>Nesses dias, o expediente termina no máximo às 18 horas.</p>
+  </div>
+  <div class="card">
+    <h3>Detalhes importantes</h3>
+    <ul class="clean">
+      <li>Horas extras em domingo ou feriado não podem ser trocadas por folga, têm que pagar extra.</li>
+      <li>No dia de eleição, o funcionário pode votar sem perder salário.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Seção banco de horas -->
+<section>
+  <div class="sec-head"><div class="sec-num">03</div><h2>Banco de horas</h2></div>
+  <div class="card info">
+    <span class="badge b-info">Como funciona</span>
+    <h3>Guardar horas extras e trocar por folga</h3>
+    <p>Você pode trocar horas extras por folga, mas com regras rígidas:</p>
+    <ul class="clean">
+      <li>Prazo de 1 ano para zerar o saldo.</li>
+      <li>Limite de 60 horas por mês.</li>
+      <li>No máximo 2 horas extras por dia.</li>
+    </ul>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Tem custo</span>
+    <h3>Banco de horas NÃO é grátis aqui</h3>
+    <p>Vai pagar 60% extra sobre as horas compensadas todo mês, além de dar a folga. Pode sair mais caro e burocrático do que pagar hora extra direto.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Burocracia</span>
+    <h3>Precisa de certificado dos sindicatos</h3>
+    <p>Banco de horas só vale se estiver registrado com um aditivo nos 2 sindicatos. Sem isso, não é válido e vira hora extra para pagar.</p>
+  </div>
+  <div class="card ok">
+    <span class="badge b-ok">Para o funcionário</span>
+    <h3>Sobrou hora ao final do ano</h3>
+    <p>Horas extras não compensadas viram pagamento com +60%. Horas negativas são zeradas, sem desconto.</p>
+  </div>
+  <div class="card info">
+    <span class="badge b-info">Menor de idade</span>
+    <h3>Menor de 18 anos no banco de horas</h3>
+    <p>Só com autorização escrita do responsável e trabalho só de dia.</p>
+  </div>
+</section>
+
+<!-- Seção custos ocultos e ajuste no caixa -->
+<section>
+  <div class="sec-head"><div class="sec-num">04</div><h2>Outros custos no caixa</h2></div>
+  <p style="color:var(--tinta-suave);margin:-8px 0 20px;font-size:.95rem">Coisas que não são domingo nem feriado, mas mexem no caixa.</p>
+  <div class="card pay">
+    <span class="badge b-pay">Pagamento único</span>
+    <h3>Contribuição Assistencial Patronal</h3>
+    <p>Empresa paga taxa ao sindicato dependendo do porte:</p>
+    <ul class="clean">
+      <li>EPP: R$ 699,00</li>
+      <li>Microempresa: R$ 499,00</li>
+      <li>Sem empregados: R$ 399,00</li>
+      <li>MEI: R$ 159,00</li>
+    </ul>
+    <p style="margin-top:10px">Cada loja paga separado, se tiver CNPJ diferente.</p>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Desconto na folha</span>
+    <h3>Contribuição do funcionário</h3>
+    <p>Desconta 5% do piso (máximo R$ 145) do salário do funcionário, até 15/12/2025.</p>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Pagamento no Natal</span>
+    <h3>Bônus do Dia do Comerciário (30/10)</h3>
+    <ul class="clean">
+      <li>Até 180 dias na loja: 1/30 do salário.</li>
+      <li>Mais de 180 dias: 2/30.</li>
+    </ul>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Hora extra</span>
+    <h3>Hora extra +60%</h3>
+    <p>Se passar da jornada, paga +60%. E se for mais de 2 horas, fornece refeição.</p>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Quem opera caixa</span>
+    <h3>Tem direito a mais</h3>
+    <ul class="clean">
+      <li>Quebra de caixa: +10% do piso por mês.</li>
+      <li>Contas de terceiros: +10% por mês.</li>
+    </ul>
+  </div>
+  <div class="card pay">
+    <span class="badge b-pay">Função extra</span>
+    <h3>Se faz duas funções, ganha +10%</h3>
+  </div>
+  <div class="card info">
+    <span class="badge b-info">Caso especial jovem (16-18)</span>
+    <h3>Empacotador ou office-boy estudante</h3>
+    <p>Piso de R$ 1.523,27. Sem hora extra, proibido trabalhar além do horário de escola.</p>
+  </div>
+</section>
+
+<!-- Seção proibido -->
+<section>
+  <div class="sec-head"><div class="sec-num">05</div><h2>O que NÃO pode fazer</h2></div>
+  <div class="card no">
+    <span class="badge b-no">Proibido</span>
+    <h3>Trabalhar em 25/12 e 01/01</h3>
+    <p>Natal e Ano Novo: ninguém pode trabalhar nesses dias. Loja tem que estar fechada.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Proibido</span>
+    <h3>Trocar a folga semanal por feriado</h3>
+    <p>A folga da 6x1 não se troca por feriado. A regra é: feriado não substitui folga.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Proibido</span>
+    <h3>Banco de horas sem registro</h3>
+    <p>Sem certificado dos sindicatos, não vale e vira hora extra.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Proibido</span>
+    <h3>Hora extra com estudante na escola</h3>
+    <p>Não pode alterar horário ou pedir hora extra que bata com o horário de escola.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Proibido</span>
+    <h3>Marmita ao invés de vale-refeição</h3>
+    <p>Dia de domingo ou feriado é vale ou refeitório. Marmita é proibida.</p>
+  </div>
+  <div class="card no">
+    <span class="badge b-no">Cuidado: multa pesada</span>
+    <h3>Descumprir regras gera multa</h3>
+    <p>25% do piso por funcionário por infração, rapidinho vira um custo alto.</p>
+  </div>
+</section>
+
+<!-- Nota final -->
+<div class="nota">
+  <span class="titn">Lembrete do seu "contador-advogado"</span>
+  Este guia vem da Convenção Coletiva 2025/2026 do sindicato (scan do PDF original). Antes de montar escala ou banco, confirme com seu contador — as regras podem variar por CNPJ. Os valores aqui são oficiais, do documento.
+</div>
+
+<!-- Link oficial no final -->
+<div class="fonte">
+  <div class="fonte-final">
+    <a class="link-pdf" href="https://www.scvbs.com.br/images/upload/files/CONVEN%C3%87%C3%83O_COLETIVA_DE_TRABALHO_2025.2026_-_definitiva.pdf" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+      Fonte oficial (PDF)
+    </a>
+  </div>
+  <p class="origem">scvbs.com.br · Convenção Coletiva 2025/2026</p>
+</div>
 
 </div>
 </body>
